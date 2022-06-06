@@ -1,0 +1,102 @@
+body {
+    font-family: Arial;
+}
+.navbar {
+    background: rgba(0, 58, 89);
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    animation: second-entry 0.5s ease-in;
+}
+.navbar-btns {
+    margin-top: 6px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+    width: 150px;
+    height: 35px;
+    background: rgb(105, 0, 0);
+    font-weight: bold;
+    transition: box-shadow ease 0.5s, width ease 0.5s;
+    cursor: pointer;
+    padding: 0px;
+    animation: second-entry 0.5s ease-in;
+}
+.navbar-btns:hover {
+    width: 200px;
+    box-shadow: 8.3px 8.3px 8.3px rgb(0, 0, 0);
+}
+.main-title {
+    text-align: center;
+    color: rgba(0, 58, 89);
+}
+.under-titles {
+    font-weight: 100;
+    color: rgba(0, 58, 89);
+}
+.quick-link {
+    text-decoration-thickness: 2px;
+    color: rgba(0, 58, 89);
+    text-shadow: 0px 0px 10px rgba(0, 58, 89);
+    transition: ease-in 5s text-shadow;
+}
+.quick-link:hover {
+    text-shadow: 0px 0px 15px rgba(0, 58, 89);
+}
+.downlaod-btns {
+    border-radius: 20px;
+    border-width: 0px;
+    width: 350px;
+    height: 50px;
+    background-color: rgb(105, 0, 0);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: ease-in 0.3s background-color, ease-in 0.35s box-shadow;
+}
+.downlaod-btns:hover {
+    box-shadow: 8px 8px 8px rgb(0, 0, 0);
+}
+pre {
+    border-radius: 20px;
+    background: rgba(7, 7, 7, 0.767);
+}
+svg {
+   animation: entry 0.5s ease-in;
+}
+#rect28083, #rect14495 {
+    animation: fade ease-in-out 0.6s infinite;
+}
+video {
+    border-radius: 50px;
+    margin-top: 0px;
+    height: 720px;
+    width: 720px;
+}
+
+@keyframes fade { 
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@keyframes entry {
+    from {
+        margin-top: 10px; 
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes second-entry {
+    from {
+        margin-top: 0px; 
+        opacity: 0;
+    }
+    to {
+        margin-top: 6px;
+        opacity: 1;
+    }
+}
