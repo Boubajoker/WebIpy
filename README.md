@@ -1,6 +1,6 @@
 # WebIpy 
 
-WebIpy is a module that can render your web-apps into an desktop apps under PyQt5 WebEngine.
+WebIpy is a python module that can render your web-apps into desktop apps under PyQt5 WebEngine.
 
 ## User Notice:
 
@@ -12,7 +12,7 @@ To install WebIpy follow the steps behavior:
 
 1. Downlaod it on the [WebIpy web-page](https://boubajoker.github.io/WebIpy/downlaods.html).
 
-2. Once the file `webipy.zip` is installed, extract it on the python interpreter path : `C:\Program Files\Python[Interpreter version]\Lib\`.
+2. Once the file `webipy_v[package version].zip` is installed, extract it on the python interpreter path : `C:\Program Files\Python[Interpreter version]\Lib\`.
 
 ### Using WebIpy module:
 
@@ -33,3 +33,5 @@ root = webipy.WebIPyAppEngine(width=1080, height=700, main_url="[html file path]
 if __name__ == '__main__':
     webipy.APP_ENGINE.exec()
 ```
+
+And that's it, happy coding :+1: !!

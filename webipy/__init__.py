@@ -45,15 +45,17 @@ class WebIPyAppEngine(QMainWindow):
     def debug_crash(self, crash_reason=None):
         if (crash_reason == 'real_crash'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://inducebrowsercrashforrealz/'))
-        
-        if (crash_reason == 'page_crash'):
+        elif (crash_reason == 'page_crash'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://crash/'))
-
-        if (crash_reason == 'page_freeze'):
+        elif (crash_reason == 'page_freeze'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://hang/'))
-        
-        if (crash_reason == 'memory_excess'):
+        elif (crash_reason == 'memory_excess'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://memory-exhaust/'))
+        elif (crash_reason == 'page_kill'):
+            self.WEB_ENGINE.setUrl(QUrl('chrome://kill/'))
+        else:
+            raise Exception(f'invalid expresion  {crash_reason}')
+        
     
     def update_url(self, q) -> QUrl:
         self.WEB_ENGINE.setUrl(QUrl(q.toString()))

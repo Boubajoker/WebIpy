@@ -23,5 +23,5 @@ downlaods_btn.addEventListener('click', ()=>{
 });
 
 credits_btn.addEventListener('click', ()=>{
-    window.location = "./credits.html"
+    window.location = "https://github.com/Boubajoker/WebIpy/blob/master/ThirdPartyNotices.md"
 });

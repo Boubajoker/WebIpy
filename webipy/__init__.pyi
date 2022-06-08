@@ -65,12 +65,5 @@ class WebIPyAppEngine(QApplication):
         pass
     def preset(self, preset_name: str | None = None) -> Any: ...
     def debug_crash(self, crash_reason: str | None = None) -> QUrl: ...
-    
-    typing.Optional[update_url]
 
-r"""
-## `APP_ENGINE` variable:
-
-The `APP_ENGINE` variable is the variable that contain's the `QApplication` SuperClass.
-"""
 APP_ENGINE = QApplication()
