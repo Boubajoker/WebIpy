@@ -17,6 +17,12 @@
             "request": "launch",
             "program": "test.py",
             "console": "integratedTerminal"
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "Launch localhost on WebIpy docs.",
+            "request": "launch",
+            "url": "http://127.0.0.1:5500/docs/index.html"
         }
     ]
 }

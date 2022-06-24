@@ -12,7 +12,7 @@ Check the [Open Source Repo](https://github.com/Boubajoker/WebIpy) on Github !
 # Third-Party Licenses List:
 
 - [Pyhton38 Interpreter](#python)
-- [Vscode](#vscode)
+- [Visual Studio Code](#visual-studio-code)
 - [GNU BASH](#gnu-bash--git)
 - [Python: os module](#python-os-module)
 - [Python: sys module](#python-sys-module)
@@ -670,7 +670,7 @@ copyrighted by Sun Microsystems, Inc. The original license terms of
 the HTML Library software distribution is included in the file
 docs/license.html_lib.
 
-# Vscode
+# Visual Studio Code
 
 This license applies to the Visual Studio Code product. Source Code for Visual Studio Code is available at https://github.com/Microsoft/vscode under the MIT license agreement at https://github.com/microsoft/vscode/blob/main/LICENSE.txt. Additional license information can be found in our FAQ at https://code.visualstudio.com/docs/supporting/faq.
 MICROSOFT SOFTWARE LICENSE TERMS

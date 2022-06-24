@@ -13,3 +13,11 @@
     - Added some features :100: :+1: :  Added `crash_reason` to the `debug_crash` function.
 
 }
+- v0.0.1 Alpha A-1 Update0.2 {master} {
+    - Improved Github documentations :books: :octocat: : Added some texts !
+    - Improved WebDocs :books: : news.json file updated, Added footer credits, added a quick link API !
+    - Improved performances :rocket: :muscle: : improved a lot docs strings in the module declaration file !
+    - Added some spicy features :fire: : added `debug` preset on the preset function + changed function name `update_url` to `set_url`.
+    
+    And more...
+}

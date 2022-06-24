@@ -6,6 +6,41 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtGui import *
+debug_page_file_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1 class="main-title" id="main_title">WEBIPY DEBUG PAGE</h1>
+    <h1 class="test-h1" id="test_h1">H1_DEBUG_TEST: Hello, World !</h1>
+    <h2 class="test-h2" id="test_h2">H2_DEBUG_TEST: Hello, World !</h2>
+    <h3 class="test-h3" id="test_h3">H3_DEBUG_TEST: Hello, World !</h3>
+    <p class="test-p" id="test_p">P_DEBUG_TEST: Hello, World !</p>
+    <a href="./hworld.html" class="test-a" id="test_a">A_DEBUG_TEST: Click Me !</a>
+    <br>
+    <br>
+    <span class="test-span" id="test_span">SPAN_DEBUG_TEST: Hello, World !</span>
+    <br>
+    <br>
+    <button class="test-btn" id="test_btn">BUTTON_DEBUG_TEST: Click Me !</button>
+<script>
+    let test_btn = document.querySelector('#test_btn');
+
+    test_btn.addEventListener('click', ()=>{
+        test_btn.innerText = "Hello, World !";
+        setTimeout(()=>{
+            test_btn.innerText = "BUTTON_DEBUG_TEST: Click Me !";
+        }, 1500);
+    });
+</script>
+</body>
+</html>
+"""
 
 class WebIPyAppEngine(QMainWindow):
     def __init__(self, width, height, main_url, min_width=None, min_height=None, max_width=None, max_height=None) -> QApplication:
@@ -40,7 +75,7 @@ class WebIPyAppEngine(QMainWindow):
         else:
             self.setMaximumSize(max_width, max_height)
 
-        self.WEB_ENGINE.urlChanged.connect(self.update_url)
+        self.WEB_ENGINE.urlChanged.connect(self.set_url)
         
     def debug_crash(self, crash_reason=None):
         if (crash_reason == 'real_crash'):
@@ -54,11 +89,10 @@ class WebIPyAppEngine(QMainWindow):
         elif (crash_reason == 'page_kill'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://kill/'))
         else:
-            raise Exception(f'invalid expresion  {crash_reason}')
-        
+            raise Exception(f'invalid expresion {crash_reason}')       
     
-    def update_url(self, q) -> QUrl:
-        self.WEB_ENGINE.setUrl(QUrl(q.toString()))
+    def set_url(self, q) -> QUrl:
+        self.WEB_ENGINE.setUrl(QUrl(q))
 
         return 0
 
@@ -73,6 +107,13 @@ class WebIPyAppEngine(QMainWindow):
             with open(self.global_url, 'w+') as f:
                 f.write('<!--!APP ENGINE Powered by WebIpy and PyQt5.WebEngine. WARNING: DO NOT DELETE THIS COMMAND EXCEPT FOR RESET THE FILE. IF DELETED THE FILE WILL BE RESET AT RELAUNCH !-->')
                 f.close()
+        
+        if (preset_name == 'debug'):
+            with open(self.global_url, 'w+') as f:
+                f.write('<!--!APP ENGINE Powered by WebIpy and PyQt5.WebEngine. WARNING: DO NOT DELETE THIS COMMAND EXCEPT FOR RESET THE FILE. IF DELETED THE FILE WILL BE RESET AT RELAUNCH !-->')
+                f.write(debug_page_file_content)
+                f.close()
+                
         return 0
 
 APP_ENGINE = QApplication(_sys.argv)

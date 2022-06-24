@@ -4,13 +4,19 @@ WebIpy is a python module that can render your web-apps into desktop apps under 
 
 ## User Notice:
 
+### **Dependencies**:
+
+- Python 3.8.10 (minimum)
+    - PyQt5 python module
+    - PyQt5.WebEngine
+
 This part of the documentation will help you to install and use WebIpy. Follow the steps behavior:
 
 ### Downlaoding & Installing WebIpy:
 
 To install WebIpy follow the steps behavior:
 
-1. Downlaod it on the [WebIpy web-page](https://boubajoker.github.io/WebIpy/downlaods.html).
+1. Downlaod it on the [WebIpy web-page](https://boubajoker.github.io/WebIpy/#QLID=Downlaods).
 
 2. Once the file `webipy_v[package version].zip` is installed, extract it on the python interpreter path : `C:\Program Files\Python[Interpreter version]\Lib\`.
 
