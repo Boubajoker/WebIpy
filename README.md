@@ -16,7 +16,7 @@ This part of the documentation will help you to install and use WebIpy. Follow t
 
 To install WebIpy follow the steps behavior:
 
-1. Downlaod it on the [WebIpy web-page](https://boubajoker.github.io/WebIpy/#QLID=Downlaods).
+1. Downlaod it on the [WebIpy web-page](https://boubajoker.github.io/WebIpy/?Link=Downlaods).
 
 2. Once the file `webipy_v[package version].zip` is installed, extract it on the python interpreter path : `C:\Program Files\Python[Interpreter version]\Lib\`.
 

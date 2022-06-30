@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="16"
-   height="16"
-   viewBox="0 0 4.2333333 4.2333333"
+   width="240"
+   height="240"
+   viewBox="0 0 63.499999 63.5"
    version="1.1"
    id="svg141"
    xml:space="preserve"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="icon_16.svg"
+   sodipodi:docname="base_icon.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="17.071908"
-     inkscape:cx="8.4641974"
-     inkscape:cy="11.74444"
+     inkscape:zoom="3.0179155"
+     inkscape:cx="83.832698"
+     inkscape:cy="119.78467"
      inkscape:window-width="1920"
      inkscape:window-height="1058"
      inkscape:window-x="-8"
@@ -37,8 +37,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"><g
-       id="g3788"
-       transform="matrix(0.06375017,0,0,0.06387141,0.07191381,0.05324512)"><rect
+       id="g3788"><rect
          style="fill:#3776ab;fill-opacity:1;stroke:#ffffff;stroke-width:0.0290269"
          id="rect871"
          width="11.325907"
@@ -72,7 +71,7 @@
          ry="5.6629581"
          transform="matrix(-0.00525718,0.99998618,-0.99999963,8.5460561e-4,0,0)" /></g><g
        id="g1544"
-       transform="matrix(0.00230078,0,0,0.0022873,0.96057827,0.93011465)"><circle
+       transform="matrix(0.03609054,0,0,0.03581094,13.939797,13.72867)"><circle
          cx="512"
          cy="512"
          r="512"
@@ -84,7 +83,7 @@
          id="path1534" /></g><g
        inkscape:label="Clip"
        id="use539"
-       transform="matrix(0.25340434,0,0,0.22963359,-2.1844295,-1.7348598)"><path
+       transform="matrix(3.9749594,0,0,3.5952484,-35.393526,-27.995389)"><path
          d="m 13.146725,13.813682 0.658214,-0.189921 0.08895,-1.025235 H 12.72301 L 12.6939,12.257341 h 1.229098 l 0.03234,-0.334462 h -1.617233 l 0.09056,1.010109 h 1.114274 l -0.0372,0.433624 -0.359026,0.100843 -0.359025,-0.100843 -0.02264,-0.278999 h -0.323447 l 0.0469,0.536148 0.658214,0.189921 M 11.86426,11.366563 h 2.564931 l -0.231264,2.722756 -1.051202,0.302528 -1.051201,-0.302528 z"
          fill="#e44d26"
          id="path544"

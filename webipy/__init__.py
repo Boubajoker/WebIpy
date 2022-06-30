@@ -6,39 +6,41 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtGui import *
-debug_page_file_content = """
+
+class Components(object):
+    class Presets(object):
+        debug_page_file_content = """
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-</head>
-<body>
-    <h1 class="main-title" id="main_title">WEBIPY DEBUG PAGE</h1>
-    <h1 class="test-h1" id="test_h1">H1_DEBUG_TEST: Hello, World !</h1>
-    <h2 class="test-h2" id="test_h2">H2_DEBUG_TEST: Hello, World !</h2>
-    <h3 class="test-h3" id="test_h3">H3_DEBUG_TEST: Hello, World !</h3>
-    <p class="test-p" id="test_p">P_DEBUG_TEST: Hello, World !</p>
-    <a href="./hworld.html" class="test-a" id="test_a">A_DEBUG_TEST: Click Me !</a>
-    <br>
-    <br>
-    <span class="test-span" id="test_span">SPAN_DEBUG_TEST: Hello, World !</span>
-    <br>
-    <br>
-    <button class="test-btn" id="test_btn">BUTTON_DEBUG_TEST: Click Me !</button>
-<script>
-    let test_btn = document.querySelector('#test_btn');
-
-    test_btn.addEventListener('click', ()=>{
-        test_btn.innerText = "Hello, World !";
-        setTimeout(()=>{
-            test_btn.innerText = "BUTTON_DEBUG_TEST: Click Me !";
-        }, 1500);
-    });
-</script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+    </head>
+    <body>
+        <h1 class="main-title" id="main_title">WEBIPY DEBUG PAGE</h1>
+        <h1 class="test-h1" id="test_h1">H1_DEBUG_TEST: Hello, World !</h1>
+        <h2 class="test-h2" id="test_h2">H2_DEBUG_TEST: Hello, World !</h2>
+        <h3 class="test-h3" id="test_h3">H3_DEBUG_TEST: Hello, World !</h3>
+        <p class="test-p" id="test_p">P_DEBUG_TEST: Hello, World !</p>
+        <a href="./hworld.html" class="test-a" id="test_a">A_DEBUG_TEST: Click Me !</a>
+        <br>
+        <br>
+        <span class="test-span" id="test_span">SPAN_DEBUG_TEST: Hello, World !</span>
+        <br>
+        <br>
+        <button class="test-btn" id="test_btn">BUTTON_DEBUG_TEST: Click Me !</button>
+    <script>
+        let test_btn = document.querySelector('#test_btn');
+        test_btn.addEventListener('click', ()=>{
+            test_btn.innerText = "Hello, World !";
+            setTimeout(()=>{
+                test_btn.innerText = "BUTTON_DEBUG_TEST: Click Me !";
+            }, 1500);
+        });
+    </script>
+    </body>
 </html>
 """
 
@@ -102,7 +104,7 @@ class WebIPyAppEngine(QMainWindow):
 
         return 0
 
-    def preset(self, preset_name=None) -> Any:
+    def preset(self, preset_name) -> Any:
         if (preset_name == 'blank'):
             with open(self.global_url, 'w+') as f:
                 f.write('<!--!APP ENGINE Powered by WebIpy and PyQt5.WebEngine. WARNING: DO NOT DELETE THIS COMMAND EXCEPT FOR RESET THE FILE. IF DELETED THE FILE WILL BE RESET AT RELAUNCH !-->')
@@ -111,9 +113,17 @@ class WebIPyAppEngine(QMainWindow):
         if (preset_name == 'debug'):
             with open(self.global_url, 'w+') as f:
                 f.write('<!--!APP ENGINE Powered by WebIpy and PyQt5.WebEngine. WARNING: DO NOT DELETE THIS COMMAND EXCEPT FOR RESET THE FILE. IF DELETED THE FILE WILL BE RESET AT RELAUNCH !-->')
-                f.write(debug_page_file_content)
+                f.write(Components.Presets.debug_page_file_content)
                 f.close()
                 
         return 0
+    
+    def custom_preset(self, file_content) -> Any:
+        with open(self.global_url, 'w+') as f:
+            f.write(file_content)
+            f.close()
+    
+    def redirect_to_chrome_url(self, url_name) -> QUrl:
+        self.WEB_ENGINE.setUrl(QUrl(f'chrome://{url_name}'))
 
 APP_ENGINE = QApplication(_sys.argv)

@@ -33,6 +33,10 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtGui import *
 
+class Components(object):
+    class Presets(object):
+        debug_page_file_content = ... # type: Components.Presets
+
 class WebIPyAppEngine(QApplication):
     r"""
     ## WebIPyAppEngine SuperClass:
@@ -55,27 +59,8 @@ class WebIPyAppEngine(QApplication):
     ```
     """
     def __init__(width: int, height: int, main_url: str, min_width: int | None = None, min_height: int | None = None, max_width: int | None = None, max_height: int | None = None) -> QApplication: ...
-    def set_url(self, q: Any) -> QUrl: ...
-    def customize_cursor(self, posX: int | None = None, posY: int | None = None) -> QCursor: 
-        """
-        ## `customize_cursor` function:
-
-        To customize the cursor's position, style...
-        e.g:
-
-        - position set:
-
-        ```py
-        >>> root = webipy.WebIPyAppEngine(width=1080, height=700, main_url="example.html")
-        >>> root.customize_cursor(960, 540) # will set the X and Y position given in the args.
-        ```
-
-        More functions soon !
-        """
-        pass
-    def preset(self, preset_name: str | None = None) -> Any: ...
     def debug_crash(self, crash_reason: str | None = None) -> QUrl:
-        """
+        r"""
         ## `debug_crash` function:
 
         To generate fake crashes events.
@@ -127,5 +112,54 @@ class WebIPyAppEngine(QApplication):
         ```        
         """
         pass
+    def set_url(self, q: Any) -> QUrl: ...
+    def customize_cursor(self, posX: int | None = None, posY: int | None = None) -> QCursor: 
+        r"""
+        ## `customize_cursor` function:
 
-APP_ENGINE = QApplication()
+        To customize the cursor's position, style...
+        e.g:
+
+        - position set:
+
+        ```py
+        >>> root = webipy.WebIPyAppEngine(width=1080, height=700, main_url="example.html")
+        >>> root.customize_cursor(960, 540) # will set the X and Y position given in the args.
+        ```
+
+        More functions soon !
+        """
+        pass
+    def preset(self, preset_name: str | None = None) -> Any:
+        r"""
+        ## `preset` function:
+
+        To apply presets on your `.html` file. BECAREFULL with this funtion, see cautions down bellow:
+
+        ## CAUTIONS
+
+        #### !WARNING!: Once this function is called, this will erase all the content in the file.
+
+        ## `preset_name` argument
+
+        @param: 'blank': Erases the file contents;
+        @param: 'debug': Re-creates the test menu for WebIpy module
+        """
+        pass
+    
+    def custom_preset(self, file_content: str) -> Any:
+        r"""
+        ## `custom_preset` function
+
+        To apply a custom preset on your `.html` file. BECAREFULL with this funtion, see cautions down bellow:
+
+        ## CAUTIONS
+
+        #### !WARNING!: Once this function is called, this will erase all the content in the file.
+
+        ## `file_content` argument
+
+        @anyStr: It can be a `str` variable or a `str`.
+        """
+    def redirect_to_chrome_url(self, url_name: str) -> QUrl: ...
+APP_ENGINE = QApplication() # type: QApplication

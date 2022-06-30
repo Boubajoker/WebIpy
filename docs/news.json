@@ -1,8 +1,8 @@
 {
-    "name" : "JSON_NEWS_REQUEST_FILE",
+    "NEWS_ID" : "WEBIPY_JSON_NEWS_REQUEST_FILE",
     "request_package" : {
-        "title" : "WebIpy v0.0.1 Alpha A-1 Update0.2 is here !",
-        "desc" : "The version of WebIpy v0.0.1 Alpha A-1 Update0.2 is now aividable !",
+        "title" : "WebIpy v0.0.1 Alpha A-1 Update0.3 is here !",
+        "desc" : "The version of WebIpy v0.0.1 Alpha A-1 Update0.3 is now aividable with a lot of new features !",
         "additional_img" : "./assets/img/CODE_IMG_01.PNG",
         "additional_video" : null
     }

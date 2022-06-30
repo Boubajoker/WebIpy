@@ -21,3 +21,9 @@
     
     And more...
 }
+
+- v0.0.1 Alpha A-1 Update0.3 {master} {
+    - Improved WebDocs :books: : Added new styles on lists, Improved quick link API, Improved security, new Icon !
+
+    - Added new features :muscle: :rocket: : Added a `custom_preset` function + Improved internal docs !
+}
