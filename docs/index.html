@@ -552,22 +552,12 @@
             <li class="lisences">Check <a href="https://github.com/Boubajoker/WebIpy/blob/master/LICENSE" target="_blank">LICENSE</a>, <a href="https://github.com/Boubajoker/WebIpy/blob/master/ThirdPartyNotices.md" target="_blank">ThirdPartyNotices.md</a>, <a href="https://github.com/Boubajoker/WebIpy/blob/master/CopyRight.txt" target="_blank">CopyRight.txt</a> and <a href="https://github.com/Boubajoker/WebIpy/blob/master/AUTHORS.md" target="_blank">AUTHORS.md</a> files for more info.</li>
           </ul>
           </footer>
+      <script>
+          const page_name = 'main_page'
+      </script>
       <script src="./JS/responsive.styles.js"></script>
-      <script src="./JS/navbar.js"></script>
+      <script src="./JS/app.js"></script>
       <script src="./JS/news.js"></script>
       <script src="./JS/quick_link_api.js"></script>
-      <script>
-        let copy_code_btn = document.querySelector('#copy_btn');
-        let check_box = document.querySelector('#check_box');
-      
-        copy_code_btn.addEventListener('click', ()=>{
-          navigator.clipboard.writeText('import webipy\n\nwebipy.APP_ENGINE.setApplicationName(\'[app name]\')\nwebipy.APP_ENGINE.setApplicationVersion(\'[app version]\')\nwebipy.APP_ENGINE.setWindowIcon(webipy.QIcon(\'[icon]\'))\nroot = webipy.WebIPyAppEngine(width=1080, height=700, main_url="[html file path]")\n\nif __name__ == \'__main__\':\n webipy.APP_ENGINE.exec()')
-          check_box.style.display = 'block';
-          check_box.style.animation = 'fade 0.5s ease-in';
-          setTimeout(()=>{
-            check_box.style.display = 'none';
-          }, 4500);
-        });
-      </script>
   </body>
 </html>

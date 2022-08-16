@@ -24,17 +24,28 @@
     height: 35px;
     background: var(--webipy-secondary-color);
     font-weight: bold;
-    transition: box-shadow ease 0.5s, width ease 0.5s;
+    transition: width ease 0.5s;
     cursor: pointer;
     padding: 0px;
 }
 .navbar-btns:hover {
     width: 200px;
-    box-shadow: 8.3px 8.3px 8.3px rgb(0, 0, 0);
-}
+} 
 .main-title {
     text-align: center;
     color: var(--webipy-primary-color);
+}
+button {
+    transition: width ease 0.5s;
+    width: 350px;
+    height: 50px;
+    border-radius: 0px 20px 20px 0px;
+    border-width: 0px;
+    background-color: var(--webipy-secondary-color);
+    cursor: pointer;
+}
+button:hover {
+    width: 400px;
 }
 h2, h3 {
     font-weight: 100;
@@ -54,6 +65,12 @@ a {
     text-decoration: none;
     color: var(--webipy-third-color);
 }
+tt {
+    border-radius: 5px;
+    background: var(--webipy-secondary-color);
+    color: rgb(255, 255, 255);
+    font-family: Consolas;
+}
 a:focus {
     text-decoration: underline;
 }
@@ -66,20 +83,6 @@ li::marker {
 }
 .desc-lists:hover {
     background-color: rgb(0, 247, 0, 0.450);
-}
-button {
-    border-radius: 20px;
-    margin-top: 5px;
-    border-width: 0px;
-    width: 350px;
-    height: 50px;
-    background-color: var(--webipy-secondary-color);
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    cursor: pointer;
-    transition: ease-in 0.5s background-color, ease-in 0.35s box-shadow;
-}
-button:hover {
-    box-shadow: 8px 8px 8px rgb(0, 0, 0);
 }
 svg {
    animation: entry 0.5s ease-in;

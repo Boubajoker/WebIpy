@@ -1,6 +1,7 @@
 let downlaod_btn_01 = document.querySelector('#downlaod_btn_01');
 let downlaod_btn_02 = document.querySelector('#downlaod_btn_02');
 let downlaod_btn_03 = document.querySelector('#downlaod_btn_03');
+let downlaod_btn_04 = document.querySelector('#downlaod_btn_04');
 
 async function get_file(file) {
     const response = await fetch(file);
@@ -39,4 +40,8 @@ downlaod_btn_02.addEventListener('click', ()=>{
 
 downlaod_btn_03.addEventListener('click', ()=>{
     this.downlaod_file(`./assets/others${downlaod_btn_03.ariaValueText}.zip`);
+});
+
+downlaod_btn_04.addEventListener('click', ()=>{
+    this.downlaod_file(`./assets/others${downlaod_btn_04.ariaValueText}.zip`);
 });

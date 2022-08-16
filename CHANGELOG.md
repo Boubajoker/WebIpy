@@ -20,10 +20,19 @@
     - Added some spicy features :fire: : added `debug` preset on the preset function + changed function name `update_url` to `set_url`.
     
     And more...
+
 }
 
 - v0.0.1 Alpha A-1 Update0.3 {master} {
     - Improved WebDocs :books: : Added new styles on lists, Improved quick link API, Improved security, new Icon !
 
     - Added new features :muscle: :rocket: : Added a `custom_preset` function + Improved internal docs !
+
+}
+
+- v0.0.1 Alpha A-1 Update0.4 {master} {
+    - Improved Internal-Docs :books: :toolbox: : Improved some doc strings, added `__doc__` and `__version__` attributes to the module's file.
+
+    - Hmmmmm... Check `README.md` file on vscode...
+
 }

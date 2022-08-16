@@ -32,6 +32,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtGui import *
+from email.mime.text import MIMEText
 
 class Components(object):
     class Presets(object):
@@ -142,8 +143,8 @@ class WebIPyAppEngine(QApplication):
 
         ## `preset_name` argument
 
-        @param: 'blank': Erases the file contents;
-        @param: 'debug': Re-creates the test menu for WebIpy module
+        @param: preset_name:- 'blank': Erases the file contents;
+                            - 'debug': Re-creates the test menu for WebIpy module
         """
         pass
     
@@ -162,4 +163,17 @@ class WebIPyAppEngine(QApplication):
         @anyStr: It can be a `str` variable or a `str`.
         """
     def redirect_to_chrome_url(self, url_name: str) -> QUrl: ...
+    
+    def feedback(self, email: str, subject: str, content: str) -> MIMEText:
+            #@beta feedback function
+            r"""
+            ## `feedback` function[BETA]:
+        
+            Give a feedback for the project ! You can submit a bug, request a feature or telling how was your experience with the module !
+
+            @param: email : insert your e-mail to send the message to the support e-mail.
+            @param: subject: insert the subject, there are 3 keywords: `feature-request`, `bug-report`, `custom`. If you do not type one of those, it will raise a ValueError.
+            @param: content: insert the content of the e-mail.
+            """
+            pass
 APP_ENGINE = QApplication() # type: QApplication

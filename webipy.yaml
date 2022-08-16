@@ -1,28 +1,6 @@
 name: 'WebIpy'
 short-name: 'W.I.py'
 version: 'v0.0.1 Alpha A-1 Update0.2'
-type: window-application
+type: python-module
 desciription: 'WebIpy is a python module that can render your web-apps into desktop apps under PyQt5 WebEngine.'
 platforms: 'Windows, Linux, OS X'
-programing-lang: 
-    infos: {
-        name: null,
-        short-name: null,
-        version: null
-    }
-
-src-files: {
-    files: [
-        "*"
-    ]
-}
-src-files.file: [
-   test.py
-   webipy/__init__.py
-]
-
-programing-lang.infos: {
-    programing-lang.name : python38,
-    programing-lang.short-name : null,
-    programing-lang.version : 3.8.10
-}

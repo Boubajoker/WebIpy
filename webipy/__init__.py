@@ -6,6 +6,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtGui import *
+from email.mime.text import MIMEText
 
 class Components(object):
     class Presets(object):
@@ -56,10 +57,10 @@ class WebIPyAppEngine(QMainWindow):
         self.setCentralWidget(self.WEB_ENGINE)
         self.show()
 
-        if width == None:
-            raise Exception('Invalid `width` value: `width` value cannot be a `NoneType` / `boolean` value.')
-        elif height == None:
-            raise Exception('Invalid `height` value: `height` value cannot be a `NoneType` / `boolean` value.')
+        if (width == True) or (width == False) or (width == None):
+            raise ValueError('Invalid `width` value: `width` value cannot be a `boolean` / `NoneType` value.')
+        elif (height == True) or (height == False) or (height == None):
+            raise ValueError('Invalid `height` value: `height` value cannot be a `boolean` / `NoneType`  value.')
         else:
             self.setBaseSize(width, height)
 
@@ -76,6 +77,10 @@ class WebIPyAppEngine(QMainWindow):
             pass
         else:
             self.setMaximumSize(max_width, max_height)
+        
+        if main_url.startswith('./'):
+            raise Exception('Invalid file path.')
+
 
         self.WEB_ENGINE.urlChanged.connect(self.set_url)
         
@@ -91,7 +96,7 @@ class WebIPyAppEngine(QMainWindow):
         elif (crash_reason == 'page_kill'):
             self.WEB_ENGINE.setUrl(QUrl('chrome://kill/'))
         else:
-            raise Exception(f'invalid expresion {crash_reason}')       
+            raise TypeError(f'invalid expresion {crash_reason}')
     
     def set_url(self, q) -> QUrl:
         self.WEB_ENGINE.setUrl(QUrl(q))
@@ -125,5 +130,24 @@ class WebIPyAppEngine(QMainWindow):
     
     def redirect_to_chrome_url(self, url_name) -> QUrl:
         self.WEB_ENGINE.setUrl(QUrl(f'chrome://{url_name}'))
+    
+    #@beta feedback function
+    def feedback(self, email, subject, content) -> MIMEText:
+        msg = MIMEText(content)
+        if subject == "feature-request":
+            msg['Subject'] = subject
+        elif subject == "bug-report":
+            msg['Subject'] = subject
+        elif subject == "custom":
+            msg['Subject'] = subject
+        else:
+            raise ValueError(f'{subject} is an invalid argument.')
+
+        msg['From'] = f"<{email}>"
+        msg['To'] = ""
+        msg.as_string()
 
 APP_ENGINE = QApplication(_sys.argv)
+
+__doc__ = "<--To check internal documentations go to the type declaration.-->"
+__version__ = "v0.0.1 Alpha A-1 Update0.4"

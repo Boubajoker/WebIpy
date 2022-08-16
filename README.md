@@ -1,3 +1,12 @@
+<style>
+    h1, h2, h3 {
+        text-shadow: 0px 0px 10px rgb(100, 140, 100, 0.570);
+        transition: text-shadow 0.5s ease-in;
+    }
+    h3:hover, h2:hover, h1:hover {
+        text-shadow: 0px 0px 10px rgb(140, 255, 140)
+    }
+</style>
 # WebIpy 
 
 WebIpy is a python module that can render your web-apps into desktop apps under PyQt5 WebEngine.
